@@ -15,7 +15,7 @@
     --bg-color-header: #fafaf9;
     --text-color-standard: #0a0a0a;
     --text-color-aside: #fafafa;
-    --text-color-main: #d6d3d1;
+    --text-color-main: #71717a;
     --button-bg-color: #06b6d4;
     --button-text-color: #fafafa;
     --extra-color-border: #fcd34d;
@@ -56,15 +56,21 @@ ul {
 
 
 img {
-    max-width: 100%;
+    height: 30px;
+    aspect-ratio: 1/1;
+
+
 }
 
 button {
     cursor: pointer;
-    border: none;
-    outline: none;
+    border: 2px solid var(--button-bg-color);
+    border-radius: 15px;
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
+    padding: 0.5rem 1rem;
+    margin: 1rem 0.6rem;
+    font-size: 1rem;
 }
 
 /*----------- Header ------------------------------*/
@@ -72,8 +78,39 @@ header {
     grid-column: 2;
     background-color: var(--bg-color-header);
     color: var(--text-color-standard);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 3rem;
+    /*margin-block: 0.5rem;*/
+}
+
+.top img, .bottom img {
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.bottom img {
+    height: 50px;
 
 }
+
+.searchbar, .inlog, .welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
 
 /*------------- Aside ------------------------------*/
 aside {
@@ -96,7 +133,7 @@ main {
     background-color: var(--bg-color-main);
     color: var(--text-color-main);
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 2fr 0.5fr 0.5fr 2fr;
 }
 
