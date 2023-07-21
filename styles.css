@@ -276,7 +276,33 @@ main {
 
 /*-----------Media Queries ------------------------------*/
 
-@media screen and (max-width: 768px) {
+/*Let op, nog toevoegen portrait voor mobiel*/
+
+@media screen and (min-device-width: 320px)
+and (max-device-width: 520px){
+    body {
+        overflow: scroll;
+    }
+    .bar {
+        flex-wrap: wrap;
+        font-size: 1rem;
+    }
+    input {
+        min-width: 300px;
+    }
+    .projects, .announcement, .trending {
+        justify-content: center;
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media screen and (max-device-width: 768px) {
     .bar {
         justify-content: center;
     }
@@ -291,7 +317,7 @@ main {
 
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-device-width: 950px) {
     .bar {
         flex-wrap: wrap;
         font-size: 1rem;
